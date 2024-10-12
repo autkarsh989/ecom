@@ -7,19 +7,20 @@ body {
 .navbar {
   background-color: #0f1d45;
   padding: 16px;
+  color: #fff;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .fillkart {
-  color: white;
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -28,6 +29,20 @@ body {
   align-items: center;
   gap: 1.5rem;
   font-weight: bold;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: #ffffff;
+  border-radius: 5px;
+  color:#0d0434
 }
 
 
