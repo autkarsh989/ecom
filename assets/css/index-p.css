@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #A855F7, #3B82F6,#A855F7);
+}
+
+.navbar {
+  background-color: #0f1d45;
+  padding: 16px;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fillkart {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: #ffffff;
+  border-radius: 5px;
+  color:#0d0434
+}
+
+
