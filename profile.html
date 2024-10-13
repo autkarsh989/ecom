@@ -28,7 +28,7 @@
           <img alt="Profile Picture" height="50" src="https://i.pinimg.com/564x/9e/5b/c0/9e5bc04372764479079dcbd8f0196318.jpg" width="50"/>
           <div class="name">
             <h5>Hello,</h5>
-            <p class="user-name">user name</p>
+            <p class="user-name" id="user-name">user name</p>
           </div>
          </div>
         </div>
@@ -81,15 +81,21 @@
     }
   
     function saveInformation() {
-      alert('Your Personal information is saved now!');
+        // Update the user name in the sidebar
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const userNameElement = document.getElementById('user-name');
+        userNameElement.textContent = `${firstName} ${lastName}`;
+        alert('Your Personal information is saved now!');
   
-      document.querySelectorAll('.input-field').forEach(input => {
-      input.disabled = true; // Disable all input after saving
-    });
-    document.querySelectorAll('.section input[type="radio"]').forEach(radio => {
-      radio.disabled = true; // Disable radio after saving
-    });
-    document.getElementById('save-button').disabled = true; // Disable save button
-  }
+        //Disabling after saving
+        document.querySelectorAll('.input-field').forEach(input => {
+            input.disabled = true;
+        });
+        document.querySelectorAll('.section input[type="radio"]').forEach(radio => {
+            radio.disabled = true; // Disable radio after saving
+        });
+        document.getElementById('save-button').disabled = true; // Disable save button
+    }
 </script>
 </html>
