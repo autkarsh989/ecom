@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/profile-p.css">
     <title>Profile</title>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="fillkart">
+                FILLKART
+            </div>
+            <div class="nav-links">
+                <a href="/cart.html">Our Products</a>
+                <a href="#">New Arrivals</a>
+                <a class="active" href="/profile.html">Sign up/Profile</a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="containers">
+        <div class="sidebar">
+         <div class="profile">
+          <img alt="Profile Picture" height="50" src="https://i.pinimg.com/564x/9e/5b/c0/9e5bc04372764479079dcbd8f0196318.jpg" width="50"/>
+          <div class="name">
+            <h5>Hello,</h5>
+            <p class="user-name">user name</p>
+          </div>
+         </div>
+        </div>
+        <div class="main-content">
+            <h2>
+             Personal Information
+            </h2>
+            <div class="section">
+             <input id="first-name" type="text" value="First name"/>
+             <input id="last-name" type="text" value="last name"/>
+            </div>
+            <div class="section">
+             <label>
+              Your Gender
+             </label>
+             <input checked="" id="male" name="gender" type="radio" value="male"/>
+             Male
+             <input id="female" name="gender" type="radio" value="female"/>
+             Female
+            </div>
+            <div class="section">
+             <label for="mobile-number">
+              Mobile Number
+             </label>
+             <input id="mobile-number" type="tel" />
+            </div>
+            <div class="section">
+             <label>
+              Manage Addresses
+             </label>
+             <input id="add-address" type="text" placeholder
+             ="➕ ADD A NEW ADDRESS">
+            </div>
+           </div>
+          </div>
+    </div>
     
 </body>
 </html>
