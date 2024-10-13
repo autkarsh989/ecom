@@ -16,7 +16,7 @@ const hamburger = document.getElementById('hamburger');
 function createProductCard(product) {
     return `
         <div class="product-card">
-            <img src="../assets/images/placeholder.png" alt="${product.name}">
+            <img src="https://storage.googleapis.com/a1aa/image/hLC146Xa4y4qB5UrLSz1zkWHy1M4Vhdep9GOvTVONxGdhBzJA.jpg" alt="${product.name}">
             <h3>${product.name}</h3>
             <p>${product.price}</p>
             <p>${product.details}</p>
