@@ -35,37 +35,61 @@
         <div class="main-content">
             <h2 class="font-bold text-xl md:text-2xl mb-6">
              Personal Information
-             <a class="text-blue-500 text-sm ml-2" href="#">Edit</a>
+             <a class="text-blue-500 text-sm ml-2" href="javascript:void(0);" onclick="enableEditing()">Edit</a>
             </h2>
             <div class="section">
-             <input class="border-4" id="first-name" type="text" value="First name"/>
-             <input class="border-4" id="last-name" type="text" value="last name"/>
+             <input class="input-field border-2 border-gray-300 rounded-lg p-3 w-full mb-4 focus:border-blue-500 focus:ring focus:ring-blue-200 disabled:bg-gray-200" id="first-name" type="text" placeholder="First name"  disabled/>
+             <input class="input-field border-2 border-gray-300 rounded-lg p-3 w-full mb-4 focus:border-blue-500 focus:ring focus:ring-blue-200 disabled:bg-gray-200" id="last-name" type="text" placeholder="last name"  disabled/>
             </div>
             <div class="section">
              <label>
               Your Gender
              </label>
-             <input checked="" id="male" name="gender" type="radio" value="male"/>
+             <input id="male" name="gender" type="radio" value="male"  disabled/>
              Male
-             <input id="female" name="gender" type="radio" value="female"/>
+             <input id="female" name="gender" type="radio" value="female"  disabled/>
              Female
             </div>
             <div class="section">
-             <label for="mobile-number">
+             <label>
               Mobile Number
              </label>
-             <input class="border-4" id="mobile-number" type="tel" />
+             <input class="input-field border-2 border-gray-300 rounded-lg p-3 w-full focus:border-blue-500 focus:ring focus:ring-blue-200 disabled:bg-gray-200" id="mobile-number" type="tel"  disabled/>
             </div>
             <div class="section">
              <label>
               Manage Addresses
              </label>
-             <input class="border-4" id="add-address" type="text" placeholder
-             ="➕ ADD A NEW ADDRESS">
+             <input class="input-field border-2 border-gray-300 rounded-lg p-3 w-full focus:border-blue-500 focus:ring focus:ring-blue-200 disabled:bg-gray-200" id="add-address" type="text" placeholder
+             ="➕ ADD A NEW ADDRESS"  disabled>
             </div>
+            <button class="save-button" id="save-button" onclick="saveInformation()" disabled>Save</button>
            </div>
           </div>
     </div>
     
 </body>
+<script>
+    function enableEditing() {
+      document.querySelectorAll('.input-field').forEach(input => {
+        input.disabled = false; 
+      });
+      document.querySelectorAll('.section input[type="radio"]').forEach(radio => {
+        radio.disabled = false; 
+      });
+      document.getElementById('save-button').disabled = false;
+    }
+  
+    function saveInformation() {
+      alert('Your Personal information is saved now!');
+  
+      document.querySelectorAll('.input-field').forEach(input => {
+      input.disabled = true; // Disable all input after saving
+    });
+    document.querySelectorAll('.section input[type="radio"]').forEach(radio => {
+      radio.disabled = true; // Disable radio after saving
+    });
+    document.getElementById('save-button').disabled = true; // Disable save button
+  }
+</script>
 </html>

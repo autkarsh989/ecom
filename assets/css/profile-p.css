@@ -104,8 +104,8 @@ body {
 }
 .main-content .section input[type="text"], .main-content .section input[type="tel"]{
   margin-bottom: 10px;
-  height: 30px;
-  width: 250px;
+  height: 40px;
+  width: 290px;
 }
 
 .main-content .section .add-address {
@@ -114,4 +114,18 @@ body {
   font-size: 14px;
   display: flex;
   align-items: center;
+}
+
+.save-button {
+  background-color: blue;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
 }
