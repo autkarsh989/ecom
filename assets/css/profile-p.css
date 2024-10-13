@@ -57,8 +57,8 @@ body {
 
 .sidebar {
   display: flex;
-  width: 350px;
-  height: 30px;
+  width: 300px;
+  height: 80px;
   background-color: white;
   padding: 20px;
   margin-right: 20px;
@@ -105,18 +105,11 @@ body {
   height: 30px;
   width: 250px;
 }
-.main-content .section .edit-link {
-  color: #0A1F44;
-  text-decoration: none;
-  font-size: 14px;
-}
+
 .main-content .section .add-address {
   color: #0A1F44;
   text-decoration: none;
   font-size: 14px;
   display: flex;
   align-items: center;
-}
-.main-content .section .add-address i {
-  margin-right: 5px;
 }
