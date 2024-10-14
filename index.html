@@ -32,11 +32,13 @@
          <div class="product-price">
           Product price
          </div>
+         <div>
          <div class="product-details">
-            <button class="toggle-details">See Details</button>
+            <button class="toggle-details-p">See Details</button>
+         </div>
          </div>
          <div class="product-details-info hidden">
-            <!-- Details content will go here -->
+
             <p>Product description, specifications, etc.</p>
         </div>
          <div class="buttons-p">
@@ -57,10 +59,10 @@
           Product price
          </div>
          <div class="product-details">
-            <button class="toggle-details">See Details</button>
+            <button class="toggle-details-p">See Details</button>
          </div>
          <div class="product-details-info hidden">
-            <!-- Details content will go here -->
+      
             <p>Product description, specifications, etc.</p>
         </div>
          <div class="buttons-p">
@@ -77,10 +79,10 @@
           Product price
          </div>
          <div class="product-details">
-            <button class="toggle-details">See Details</button>
+            <button class="toggle-details-p">See Details</button>
          </div>
          <div class="product-details-info hidden">
-            <!-- Details content will go here -->
+
             <p>Product description, specifications, etc.</p>
         </div>
          <div class="buttons-p">
@@ -101,10 +103,10 @@
           Product price
          </div>
          <div class="product-details">
-            <button class="toggle-details">See Details</button>
+            <button class="toggle-details-p">See Details</button>
          </div>
          <div class="product-details-info hidden">
-            <!-- Details content will go here -->
+
             <p>Product description, specifications, etc.</p>
         </div>
          <div class="buttons-p">
@@ -125,11 +127,34 @@
           Product price
          </div>
          <div class="product-details">
+            <button class="toggle-details-p">See Details</button>
+         </div>
+         <div class="product-details-info hidden">
+    
+            <p>Product description, etc.</p>
+        </div>
+         <div class="buttons-p">
+          <button class="buy-now">
+           BUY NOW
+          </button>
+          <button class="to-cart">
+           TO CART
+          </button>
+         </div>
+        </div>
+        <div class="product-card">
+         <img alt="Product image" height="200" src="https://storage.googleapis.com/a1aa/image/hLC146Xa4y4qB5UrLSz1zkWHy1M4Vhdep9GOvTVONxGdhBzJA.jpg" width="200"/>
+         <div class="product-name">
+          Product name
+         </div>
+         <div class="product-price">
+          Product price
+         </div>
+         <div class="product-details-p">
             <button class="toggle-details">See Details</button>
          </div>
          <div class="product-details-info hidden">
-            <!-- Details content will go here -->
-            <p>Product description, specifications, etc.</p>
+            <p>Product description etc.</p>
         </div>
          <div class="buttons-p">
           <button class="buy-now">
@@ -149,34 +174,9 @@
           Product price
          </div>
          <div class="product-details">
-            <button class="toggle-details">See Details</button>
+            <button class="toggle-details-p">See Details</button>
          </div>
          <div class="product-details-info hidden">
-            <!-- Details content will go here -->
-            <p>Product description, specifications, etc.</p>
-        </div>
-         <div class="buttons-p">
-          <button class="buy-now">
-           BUY NOW
-          </button>
-          <button class="to-cart">
-           TO CART
-          </button>
-         </div>
-        </div>
-        <div class="product-card">
-         <img alt="Product image" height="200" src="https://storage.googleapis.com/a1aa/image/hLC146Xa4y4qB5UrLSz1zkWHy1M4Vhdep9GOvTVONxGdhBzJA.jpg" width="200"/>
-         <div class="product-name">
-          Product name
-         </div>
-         <div class="product-price">
-          Product price
-         </div>
-         <div class="product-details">
-            <button class="toggle-details">See Details</button>
-         </div>
-         <div class="product-details-info hidden">
-            <!-- Details content will go here -->
             <p>Product description, specifications, etc.</p>
         </div>
          <div class="buttons-p">
@@ -198,10 +198,9 @@
           Product price
          </div>
          <div class="product-details">
-            <button class="toggle-details">See Details</button>
+            <button class="toggle-details-p">See Details</button>
          </div>
          <div class="product-details-info hidden">
-            <!-- Details content will go here -->
             <p>Product description, specifications, etc.</p>
         </div>
          <div class="buttons-p">
@@ -217,16 +216,16 @@
 </body>
 <script src="./assets/js/script.js" ></script>
 <script>
-    // Get all toggle buttons
-    const toggleButtons = document.querySelectorAll('.toggle-details');
+    // to hide and show the details(toggle)
+    const toggleButtons = document.querySelectorAll('.toggle-details-p');
 
-    // Add click event listener to each toggle button
+
     toggleButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Find the parent product-card
+            // find the parent product-card
             const productCard = button.closest('.product-card');
 
-            // Toggle the visibility of product-details-info
+            
             const detailsInfo = productCard.querySelector('.product-details-info');
             detailsInfo.classList.toggle('hidden');
         });

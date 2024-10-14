@@ -73,12 +73,18 @@ body {
 }
 .product-card .product-price {
   font-size: 16px;
-  color: #555;
+  color: #0f1d45;
+  margin-right: 8rem;
 }
 .product-card .product-details {
   font-size: 14px;
-  color: #777;
+  color:#0f1d45;
+  margin-right: 9.5rem;
 }
+.toggle-details-p:hover{
+  text-decoration: underline;
+}
+
 /* .product-card .buttons {
   display: flex;
   justify-content: space-around;
