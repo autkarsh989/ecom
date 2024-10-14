@@ -16,13 +16,14 @@ for(let i =0 ;i<arr.length;i++){
     
 }
 const saving=(obj)=>{
-    let array=localStorage.getItem('products')||[]
+    let array=localStorage.getItem('products')||'[]'
     array=JSON.parse(array)
     array.push(obj)
+  
+  
     const products=JSON.stringify(array)
     localStorage.setItem('products',products)
-    console.log(array)
-  
+    
 }
     const retFun=()=>{
         const retArr=JSON.parse(localStorage.getItem('products'))
