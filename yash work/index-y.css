@@ -166,3 +166,7 @@ button {
         display: block; /* Show hamburger icon */
     }
 }
+.add-to-cart{
+    color: white;
+    width: 50;
+}

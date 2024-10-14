@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/profile-p.css">
     <link rel="stylesheet" href="yash work/index-y.css">
 </head>
 <body>
-    <div id="cart"></div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="fillkart">
+                FILLKART
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Our Products</a>
+                <a href="#">New Arrivals</a>
+                <a href="/profile.html">Sign up/Profile</a>
+                <a class="active"  href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="product-grid" id="product-grid">
+        <!-- Product Cards will be inserted here -->
+    </div>
 
     <script>
         const retFun = () => {
@@ -31,7 +49,7 @@
 
          
 
-        const cartContainer = document.getElementById('cart');
+        const cartContainer = document.getElementById('product-grid');
         const cart = retFun();
         
         if (cart.length > 0) {
