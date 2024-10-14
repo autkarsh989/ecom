@@ -33,8 +33,12 @@
           Product price
          </div>
          <div class="product-details">
-          See Details
+            <button class="toggle-details">See Details</button>
          </div>
+         <div class="product-details-info hidden">
+            <!-- Details content will go here -->
+            <p>Product description, specifications, etc.</p>
+        </div>
          <div class="buttons-p">
           <button class="buy-now">
            BUY NOW
@@ -53,8 +57,12 @@
           Product price
          </div>
          <div class="product-details">
-          See Details
+            <button class="toggle-details">See Details</button>
          </div>
+         <div class="product-details-info hidden">
+            <!-- Details content will go here -->
+            <p>Product description, specifications, etc.</p>
+        </div>
          <div class="buttons-p">
           <button class="buy-now">BUY NOW</button>
           <button class="to-cart">TO CART</button>
@@ -69,8 +77,12 @@
           Product price
          </div>
          <div class="product-details">
-          See Details
+            <button class="toggle-details">See Details</button>
          </div>
+         <div class="product-details-info hidden">
+            <!-- Details content will go here -->
+            <p>Product description, specifications, etc.</p>
+        </div>
          <div class="buttons-p">
           <button class="buy-now">
            BUY NOW
@@ -89,8 +101,12 @@
           Product price
          </div>
          <div class="product-details">
-          See Details
+            <button class="toggle-details">See Details</button>
          </div>
+         <div class="product-details-info hidden">
+            <!-- Details content will go here -->
+            <p>Product description, specifications, etc.</p>
+        </div>
          <div class="buttons-p">
           <button class="buy-now">
            BUY NOW
@@ -109,8 +125,12 @@
           Product price
          </div>
          <div class="product-details">
-          See Details
+            <button class="toggle-details">See Details</button>
          </div>
+         <div class="product-details-info hidden">
+            <!-- Details content will go here -->
+            <p>Product description, specifications, etc.</p>
+        </div>
          <div class="buttons-p">
           <button class="buy-now">
            BUY NOW
@@ -129,8 +149,12 @@
           Product price
          </div>
          <div class="product-details">
-          See Details
+            <button class="toggle-details">See Details</button>
          </div>
+         <div class="product-details-info hidden">
+            <!-- Details content will go here -->
+            <p>Product description, specifications, etc.</p>
+        </div>
          <div class="buttons-p">
           <button class="buy-now">
            BUY NOW
@@ -149,8 +173,12 @@
           Product price
          </div>
          <div class="product-details">
-          See Details
+            <button class="toggle-details">See Details</button>
          </div>
+         <div class="product-details-info hidden">
+            <!-- Details content will go here -->
+            <p>Product description, specifications, etc.</p>
+        </div>
          <div class="buttons-p">
           <button class="buy-now">
            BUY NOW
@@ -170,8 +198,12 @@
           Product price
          </div>
          <div class="product-details">
-          See Details
+            <button class="toggle-details">See Details</button>
          </div>
+         <div class="product-details-info hidden">
+            <!-- Details content will go here -->
+            <p>Product description, specifications, etc.</p>
+        </div>
          <div class="buttons-p">
           <button class="buy-now">
            BUY NOW
@@ -183,8 +215,23 @@
         </div>
        </div>
 </body>
-<script src="./assets/js/script.js" >
+<script src="./assets/js/script.js" ></script>
+<script>
+    // Get all toggle buttons
+    const toggleButtons = document.querySelectorAll('.toggle-details');
 
+    // Add click event listener to each toggle button
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Find the parent product-card
+            const productCard = button.closest('.product-card');
+
+            // Toggle the visibility of product-details-info
+            const detailsInfo = productCard.querySelector('.product-details-info');
+            detailsInfo.classList.toggle('hidden');
+        });
+    });
 </script>
+
 
 </html>
