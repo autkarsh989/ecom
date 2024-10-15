@@ -27,7 +27,7 @@
         <!-- Product Cards will be inserted here -->
     </div>
 
-    <script>
+    <script >
         const retFun = () => {
             const retArr = JSON.parse(localStorage.getItem('products')) || [];
             return retArr;
@@ -40,7 +40,7 @@
                     <h3>${product.productName}</h3>
                     <p>${product.price}</p>
                     <div class="button-group">
-                        <button class="add-to-cart">Remove</button>
+                        <button class="remove-from-cart">Remove</button>
                     </div>
                 </div>
             `;
@@ -48,16 +48,41 @@
 
          
 
-        const cartContainer = document.getElementById('product-grid');
-        const cart = retFun();
-        
-        if (cart.length > 0) {
-            cart.forEach(product => {
+    const cartContainer = document.getElementById('product-grid');
+    const cart = retFun();
+    // const renderCart = () => { 
+    //     cartContainer.innerHTML = '';
+    if (cart.length > 0) {
+        cart.forEach((product,index) => {
                 cartContainer.innerHTML += createProductCard(product);
             });
         } else {
             cartContainer.innerHTML = '<p>Your cart is empty.</p>';
         }
-    </script>
+    //     addRemoveEventListeners();
+    // };
+
+
+// remove functionality
+cartContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('remove-from-cart')) {
+            const index = e.target.getAttribute('data-index');
+            cart.splice(index, 1); 
+            localStorage.setItem('products', JSON.stringify(cart)); 
+            cartContainer.innerHTML = '';
+
+            if (cart.length > 0) {
+                cart.forEach((product, index) => {
+                    cartContainer.innerHTML += createProductCard(product, index);
+                });
+            } else {
+                cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+            }
+        }
+    });
+</script>
+
+
+
 </body>
 </html>

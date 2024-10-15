@@ -216,20 +216,7 @@
 </body>
 <script src="./assets/js/script.js" ></script>
 <script>
-    // to hide and show the details(toggle)
-    const toggleButtons = document.querySelectorAll('.toggle-details-p');
 
-
-    toggleButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // find the parent product-card
-            const productCard = button.closest('.product-card');
-
-            
-            const detailsInfo = productCard.querySelector('.product-details-info');
-            detailsInfo.classList.toggle('hidden');
-        });
-    });
 </script>
 
 
