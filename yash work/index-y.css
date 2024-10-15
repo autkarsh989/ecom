@@ -70,14 +70,14 @@ body {
 /* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(550px,1fr));
     gap: 20px;
     padding: 30px;
-    background-color: #fff;
+    background-color: #f4f4f4;
 }
 
 .product-card {
-    background-color: #f4f4f4;
+    background-color: transparent;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -85,7 +85,7 @@ body {
 }
 
 .product-card img {
-    width: 100%;
+    width: 25%;
     height: 200px;
     background-color: #3c3b58;
     border-radius: 10px;
