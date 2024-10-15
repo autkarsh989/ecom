@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="index-y.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">FillKart</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+        <div class="cart">
+            <a href="cart.html">🛒 (<span id="cart-count">0</span>)</a>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+
+    <div class="profile-info">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p class="toggle-link" onclick="toggleForm()">Don't have an account? Sign up</p>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const formTitle = document.querySelector('.profile-info h2');
+            const toggleText = document.querySelector('.toggle-link');
+            const form = document.getElementById('login-form');
+
+            if (formTitle.textContent === 'Login') {
+                formTitle.textContent = 'Sign Up';
+                toggleText.textContent = 'Already have an account? Login';
+                form.innerHTML = `
+                    <input type="text" placeholder="Username" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                `;
+            } else {
+                formTitle.textContent = 'Login';
+                toggleText.textContent = "Don't have an account? Sign up";
+                form.innerHTML = `
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>

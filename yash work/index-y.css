@@ -5,10 +5,25 @@
     box-sizing: border-box;
 }
 
-body {     
-    font-family: Arial, sans-serif;     
-    background: linear-gradient(45deg, #4b4986, rgb(99, 49, 95)); 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.product-grid {
+    flex: 1; /* Make the product grid fill the remaining space */
+    /* background-color: #a11616; */
+}
+
 
 
 /* Navbar */
@@ -17,7 +32,7 @@ body {
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
+    padding: 30px 30px;
     align-items: center;
     flex-wrap: wrap; /* Ensure wrapping for smaller screens */
 }
@@ -42,6 +57,10 @@ body {
     background-color: #f4f4f4;
     color: #0a2e51;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.navbar .logo{
+    font-size: 25px;
 }
 
 /* Mobile View Adjustments */
@@ -70,14 +89,14 @@ body {
 /* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(550px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 30px;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 .product-card {
-    background-color: transparent;
+    background-color: #ada8a8;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -85,7 +104,7 @@ body {
 }
 
 .product-card img {
-    width: 25%;
+    width: 100%;
     height: 200px;
     background-color: #3c3b58;
     border-radius: 10px;
@@ -166,7 +185,160 @@ button {
         display: block; /* Show hamburger icon */
     }
 }
-.add-to-cart{
+
+
+/* Cart Page Styles */
+.cart-items {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    background-color: #fff;
+}
+
+.cart-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between image and content */
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.cart-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.cart-item .remove-btn {
+    background-color: red;
     color: white;
-    width: 50;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cart-item .remove-btn:hover {
+    background-color: darkred;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    color: #0a2e51;
+}
+
+
+/* Enhanced Cart Icon */
+.cart {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cart a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.cart a:hover {
+    color: yellow;
+}
+
+.cart a::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: none; /* Initially hidden */
+}
+
+
+
+
+/* Profile Page Styles (Login & Signup) */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #0a2e51;
+}
+
+.profile-info form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-info form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.profile-info form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0a2e51;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.profile-info form button:hover {
+    background-color: #083a6e;
+}
+
+/* Toggle between Login and Signup */
+.toggle-link {
+    margin-top: 10px;
+    color: #0a2e51;
+    cursor: pointer;
+    text-align: center;
+}
+
+.toggle-link:hover {
+    text-decoration: underline;
 }

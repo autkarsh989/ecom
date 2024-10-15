@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="index-y.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">FillKart</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="cart">
+            <a href="cart.html">🛒 (<span id="cart-count">0</span>)</a>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+
+    <!-- Cart Items -->
+    <div class="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load the cart items when the cart page is loaded
+        document.addEventListener('DOMContentLoaded', loadCartItems);
+    </script>
+
+</body>
+</html>
