@@ -50,14 +50,20 @@
 
     const cartContainer = document.getElementById('product-grid');
     const cart = retFun();
-    // const renderCart = () => { 
-    //     cartContainer.innerHTML = '';
     if (cart.length > 0) {
-        cart.forEach((product,index) => {
+        cart.forEach((product) => {
                 cartContainer.innerHTML += createProductCard(product);
             });
         } else {
-            cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+            cartContainer.innerHTML = `
+    <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-10 rounded-lg shadow-lg text-center">
+            <h1 class="text-3xl font-bold mb-8">Your Cart is Empty</h1>
+            <p class="text-gray-600 mb-6">Looks like you haven't added anything to your cart yet.</p>
+            <a href="/index.html" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Browse Products</a>
+        </div>
+    </div>
+`;
         }
     //     addRemoveEventListeners();
     // };
@@ -76,13 +82,18 @@ cartContainer.addEventListener('click', (e) => {
                     cartContainer.innerHTML += createProductCard(product, index);
                 });
             } else {
-                cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+                cartContainer.innerHTML = `
+    <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-10 rounded-lg shadow-lg text-center">
+            <h1 class="text-3xl font-bold mb-8">Your Cart is Empty</h1>
+            <p class="text-gray-600 mb-6">Looks like you haven't added anything to your cart yet.</p>
+            <a href="/index.html" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Browse Products</a>
+        </div>
+    </div>
+`;
             }
         }
     });
 </script>
-
-
-
 </body>
 </html>
