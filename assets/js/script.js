@@ -19,7 +19,7 @@ const saving=(obj)=>{
     let array=localStorage.getItem('products')||'[]'
     array=JSON.parse(array)
     array.push(obj)
-  
+    alert("item added in cart")
   
     const products=JSON.stringify(array)
     localStorage.setItem('products',products)

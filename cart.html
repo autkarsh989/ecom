@@ -70,7 +70,6 @@ cartContainer.addEventListener('click', (e) => {
             cart.splice(index, 1); 
             localStorage.setItem('products', JSON.stringify(cart)); 
             cartContainer.innerHTML = '';
-
             if (cart.length > 0) {
                 cart.forEach((product, index) => {
                     cartContainer.innerHTML += createProductCard(product, index);
@@ -79,6 +78,7 @@ cartContainer.addEventListener('click', (e) => {
                 cartContainer.innerHTML = '<p>Your cart is empty.</p>';
             }
         }
+        alert("item removed")
     });
 </script>
 
