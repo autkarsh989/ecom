@@ -35,7 +35,7 @@ body {
 .navbar .nav-links a.active {
     
     font-weight: bold;
-    
+    border-bottom: 2px solid #ff4785;
 }
 
 .product-grid {
