@@ -1,42 +1,54 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+    background: linear-gradient(to right, #A855F7, #3B82F6,#A855F7);
 }
 
 .navbar {
     background-color: #0f1d45;
-    padding: 10px;
-    color: white;
+    padding: 16px;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-}
-
-.navbar .fillkart {
-    font-size: 1.5em;
+    align-items: center;
+  }
+  
+  .fillkart {
+    font-size: 24px;
     font-weight: bold;
-}
-
-.navbar .nav-links a {
-    color: rgb(255, 255, 255);
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: #fff;
     text-decoration: none;
-    margin-right: 20px;
-}
-
-.navbar .nav-links a.active {
- color:black;
-
-}
-.nav-links a :hover{
-    color: black;
-
-}
-
-.navbar .nav-links a.active {
-    
-    font-weight: bold;
-    border-bottom: 2px solid #ff4785;
-}
+    padding: 10px;
+    transition: background 0.3s;
+    border-radius: 5px;
+  }
+  
+  .nav-links a:hover {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color:#0d0434
+  }
+  
+  .nav-links a.active {
+    background-color: #fff;
+    color: #0b0e1d;
+  }
 
 .product-grid {
     display: flex;
