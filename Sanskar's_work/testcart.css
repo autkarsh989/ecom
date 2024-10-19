@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-    background-color: #1e3a8a;
+    background-color: #0f1d45;
     padding: 10px;
     color: white;
     display: flex;
@@ -18,12 +18,22 @@ body {
 }
 
 .navbar .nav-links a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin-right: 20px;
 }
 
 .navbar .nav-links a.active {
+ color:black;
+
+}
+.nav-links a :hover{
+    color: black;
+
+}
+
+.navbar .nav-links a.active {
+    
     font-weight: bold;
     border-bottom: 2px solid #ff4785;
 }
