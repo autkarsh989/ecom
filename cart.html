@@ -33,18 +33,18 @@
             return retArr;
         }
 
-        const createProductCard = (product) => {
-            return `
-                <div class="product-card">
-                    <img src="${product.url}" alt="${product.productName}">
-                    <h3>${product.productName}</h3>
-                    <p>${product.price}</p>
-                    <div class="button-group">
-                        <button class="remove-from-cart">Remove</button>
-                    </div>
-                </div>
-            `;
-        }
+        const createProductCard = (product, index) => {
+    return `
+        <div class="product-card">
+            <img class="product-img" src="${product.url}" alt="${product.productName}">
+            <div class="product-details">
+                <h3 class="product-name">${product.productName}</h3>
+                <p class="product-price">${product.price}</p>
+                <a href="#" class="remove-from-cart" data-index="${index}">REMOVE</a>
+            </div>
+        </div>
+    `;
+};
 
          
 
